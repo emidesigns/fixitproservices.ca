@@ -15,7 +15,9 @@ function Contact() {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm<FormValues>();
+  } = useForm<FormValues>({
+    mode: "onChange", // Trigger validation on input change
+  });
 
   const [isEmailSent, setIsEmailSent] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
@@ -37,7 +39,6 @@ function Contact() {
         },
         "r7pVp8RTkV6PiUVw3"
       );
-      console.log("Data sent to emailjs:", data);
 
       // Set state to display success message and store the response
       setIsEmailSent(true);
@@ -63,7 +64,7 @@ function Contact() {
         <p className="mx-auto max-w-xl py-4 text-white text-xl">
           Connect with us for consultations, questions, or to brainstorm ideas.
           Whether you have a specific project in mind or are simply exploring
-          possibilities, we're here to assist.
+          possibilities, we’'re here to assist.
         </p>
         <form
           onSubmit={handleSubmit(onSubmit)}

@@ -19,16 +19,14 @@ function App() {
       <section className="text-white">
         <div className="grid text-center">
           <h2 className="max-w-3xl mx-auto px-10 py-14 sm:pt-6 sm:py-18 font-extrabold">
-            Transform your house into a dream home with our expert renovations
-            team.{" "}
+            Turn your house into a dream home with the skillful touch of our
+            handyman team. From small repairs to personalized improvements,
+            we’ve got you covered.{" "}
           </h2>
           <div className="max-w-full bg-white py-10">
             <p className="max-w-3xl px-8 sm:px-0 mx-auto text-black text-lg">
-              In every interaction, we aim to make a lasting impact through
-              top-notch renovations and handyman services in{" "}
-              <strong>Toronto</strong> and <strong>Etobicoke</strong>. Our
-              commitment goes beyond transactions, fostering enduring customer
-              relationships built on <strong>trust</strong>,{" "}
+            In every interaction, we strive to make a lasting impact through top-notch <strong>handyman</strong> and <strong>repair services</strong> in{" "}
+              <strong>Toronto</strong> and <strong>Etobicoke</strong>. Our commitment goes beyond transactions, fostering enduring customer relationships built on <strong>trust</strong>,{" "}
               <strong>reliability</strong>, and{" "}
               <strong>unparalleled service</strong>.
             </p>
