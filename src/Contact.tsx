@@ -64,7 +64,7 @@ function Contact() {
         <p className="mx-auto max-w-xl py-4 text-white text-xl">
           Connect with us for consultations, questions, or to brainstorm ideas.
           Whether you have a specific project in mind or are simply exploring
-          possibilities, we’'re here to assist.
+          possibilities, we’re here to assist.
         </p>
         <form
           onSubmit={handleSubmit(onSubmit)}

@@ -19,8 +19,8 @@ function App() {
       <section className="text-white">
         <div className="grid text-center">
           <h2 className="max-w-3xl mx-auto px-10 py-14 sm:pt-6 sm:py-18 font-extrabold">
-            Turn your house into a dream home with the skillful touch of our
-            handyman team. From small repairs to personalized improvements,
+            Turn your house into a dream home with our
+            handyman team. From small repairs to home improvements,
             we’ve got you covered.{" "}
           </h2>
           <div className="max-w-full bg-white py-10">
