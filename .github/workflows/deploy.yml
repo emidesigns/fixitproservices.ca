@@ -28,4 +28,11 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./docs/
-          remote-dir: /public_html
+          server-dir: /public_html/  # Use server-dir instead of remote-dir
+
+      - name: Check for Errors
+        run: |
+          if [ $? -ne 0 ]; then
+            echo "FTP deployment failed"
+            exit 1
+          fi
