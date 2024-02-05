@@ -1,27 +1,41 @@
 import Contact from "./Contact";
 import Footer from "./Footer";
 import PoweredBy from "./PoweredBy";
+import backgroundImage from "./assets/images/fixitproservices-bg.jpg";
 
 function App() {
   return (
     <>
-      <section className="container mx-auto pt-20 pr-20 pl-20">
-        <div className="grid justify-center items-center text-center">
-          <h1 className="max-w-2xl mx-auto text-7xl md:text-8xl text-white leading-none">
-            Fixit Pro Services
-          </h1>
-          <span className="material-symbols-outlined text-9xl text-yellow">
-            construction
-          </span>
-        </div>
-      </section>
-
-      <section className="text-white">
+      <div
+        className="max-w-full"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}
+      >
+        <section className="container mx-auto pt-20 pb-10 pr-20 pl-20 main-bg">
+          <div className="grid justify-center text-center">
+            <h1 className="max-w-xl mx-auto text-5xl md:text-7xl text-white pb-10">
+              Fixit Pro Services
+            </h1>
+            <span className="material-symbols-outlined text-9xl text-yellow">
+              construction
+            </span>
+          </div>
+        </section>
+        <section>
         <div className="grid text-center">
-          <h2 className="max-w-3xl mx-auto px-10 py-14 sm:pt-6 sm:py-18 font-extrabold">
+          <h2 className="max-w-3xl mx-auto text-xl md:text-3xl px-10 pb-20 sm:pt-6 sm:py-18 font-medium text-white">
             Turn your house into a dream home with our handyman team. From small
             repairs to home improvements, we’ve got you covered.{" "}
           </h2>
+        </div>
+        </section>
+      </div>
+
+      <section>
+        <div className="grid text-center">
           <div className="max-w-full bg-white py-10">
             <p className="max-w-3xl px-8 sm:px-0 mx-auto text-black text-lg">
               In every interaction, we strive to make a lasting impact through
