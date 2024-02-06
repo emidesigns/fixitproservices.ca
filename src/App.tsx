@@ -14,7 +14,7 @@ function App() {
           backgroundPosition: "center",
         }}
       >
-        <section className="container mx-auto pt-20 pb-10 pr-20 pl-20 main-bg">
+        <section className="container mx-auto pt-20 px-20 main-bg">
           <div className="grid justify-center text-center">
             <h1 className="max-w-xl mx-auto text-5xl md:text-7xl text-white pb-10">
               Fixit Pro Services
@@ -26,7 +26,7 @@ function App() {
         </section>
         <section>
         <div className="grid text-center">
-          <h2 className="max-w-3xl mx-auto text-xl md:text-3xl px-10 pb-20 sm:pt-6 sm:py-18 font-medium text-white">
+          <h2 className="max-w-3xl mx-auto text-xl md:text-3xl px-10 pb-20 sm:pt-6 font-medium text-white">
             Turn your house into a dream home with our handyman team. From small
             repairs to home improvements, we’ve got you covered.{" "}
           </h2>
