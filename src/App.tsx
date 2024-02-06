@@ -1,9 +1,15 @@
+import React from 'react';
 import Contact from "./Contact";
 import Footer from "./Footer";
 import PoweredBy from "./PoweredBy";
 import backgroundImage from "./assets/images/fixitproservices-bg.jpg";
 
 function App() {
+  React.useEffect(() => {
+    const img = new Image();
+    img.src = backgroundImage;
+  }, []);
+
   return (
     <>
       <div
