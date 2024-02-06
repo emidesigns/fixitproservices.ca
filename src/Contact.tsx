@@ -61,7 +61,7 @@ function Contact() {
   return (
     <>
       <section className="grid py-20 bg-gray-900">
-        <h1 className="sm:text-7xl md:text-8xl py-8 mx-auto text-white">
+        <h1 className="sm:text-4xl md:text-5xl py-8 mx-auto text-white">
           Get in touch!
         </h1>
         <div className="mx-auto px-8">
