@@ -111,7 +111,7 @@ function App() {
       <section className="bg-gray-900 max-w-full pb-8">
         <h3 className="text-center text-yellow py-12 px-8">Our services:</h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl md:mx-auto mx-8 mb-8">
           {services.map((service, index) => (
             <ServiceTile key={index} {...service} />
           ))}
