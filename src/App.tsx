@@ -2,7 +2,7 @@ import React from 'react';
 import Contact from "./Contact";
 import Footer from "./Footer";
 import PoweredBy from "./PoweredBy";
-import backgroundImage from "./assets/images/fixitproservices-bg.jpg";
+import backgroundImage from "./assets/images/fixitproservices-bg.webp";
 
 function App() {
   React.useEffect(() => {
