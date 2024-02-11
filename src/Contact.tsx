@@ -60,7 +60,7 @@ function Contact() {
 
   return (
     <>
-      <section className="grid pb-20 bg-gray-900">
+      <section id="contact-section" className="grid pb-20 bg-gray-900">
         <h1 className="text-4xl md:text-6xl py-8 mx-auto text-white">
           Get in touch!
         </h1>
@@ -163,6 +163,15 @@ function Contact() {
               Email successfully sent! Thank you for contacting us.
             </div>
           )}
+          <p className="mx-auto max-w-xl py-4 text-white text-xl">
+            Or email us at:{" "}
+            <a
+              className="underline underline-offset-4"
+              href="mailto:info@fixitproservices.ca"
+            >
+              info@fixitproservices.ca
+            </a>
+          </p>
         </div>
       </section>
     </>

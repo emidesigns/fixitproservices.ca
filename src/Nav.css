@@ -1,0 +1,22 @@
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  padding: 1em 0;
+  color: white;
+  text-align: center;
+  transition: 0.32s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+.fixed {
+  height: 20px;
+  transition: 0.25s;
+}
+
+.nav-logo {
+    font-family: "Bungee", sans-serif;
+}
