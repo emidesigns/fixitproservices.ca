@@ -65,7 +65,7 @@ function Contact() {
           Get in touch!
         </h1>
         <div className="mx-auto px-8">
-          <p className="mx-auto max-w-xl py-4 text-white text-xl">
+          <p className="mx-auto max-w-xl py-4 text-white text-lg">
             Connect with us for consultations, questions, or to brainstorm
             ideas. Whether you have a specific project in mind or are simply
             exploring possibilities, we’re here to assist.
