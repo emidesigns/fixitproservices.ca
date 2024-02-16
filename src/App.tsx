@@ -3,7 +3,7 @@ import Nav from "./Nav";
 import ServiceTile from "./ServiceTile";
 import Contact from "./Contact";
 import services from "./data/servicesData";
-import backgroundImage from "./assets/images/fixitproservices-bg.webp";
+import backgroundImage from "./assets/images/fixitproservices-bg.jpg";
 import "./App.css";
 
 function App() {
