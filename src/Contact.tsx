@@ -14,9 +14,9 @@ function Contact() {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitted, isValid },
   } = useForm<FormValues>({
-    mode: "onChange", // Trigger validation on input change
+    mode: "onSubmit",
   });
 
   const [isEmailSent, setIsEmailSent] = useState(false);
@@ -95,9 +95,9 @@ function Contact() {
                   required: "Name is a required field",
                 })}
               />
-              {errors.user_name && (
+              {isSubmitted && !isValid && (
                 <div className="text-yellow pt-1">
-                  {errors.user_name.message}
+                  {errors.user_name?.message}
                 </div>
               )}
             </div>
@@ -120,8 +120,10 @@ function Contact() {
                   required: "Contact information is a required field",
                 })}
               />
-              {errors.contact && (
-                <div className="text-yellow pt-1">{errors.contact.message}</div>
+              {isSubmitted && !isValid && (
+                <div className="text-yellow pt-1">
+                  {errors.contact?.message}
+                </div>
               )}
             </div>
 
