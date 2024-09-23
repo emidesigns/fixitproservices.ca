@@ -106,9 +106,9 @@ function PrivacyPolicy() {
                 your personal information. Please contact us at{" "}
                 <a
                   className="underline underline-offset-4"
-                  href="mailto:info@fixitproservices.ca"
+                  href="mailto:info.fixitproservices@gmail.com"
                 >
-                  info@fixitproservices.ca
+                  info.fixitproservices@gmail.com
                 </a>{" "}
                 for such requests.
               </p>
@@ -130,9 +130,9 @@ function PrivacyPolicy() {
                 <p>Fixit Pro Services</p>
                 <a
                   className="underline underline-offset-4"
-                  href="mailto:info@fixitproservices.ca"
+                  href="mailto:info.fixitproservices@gmail.com"
                 >
-                  info@fixitproservices.ca
+                  info.fixitproservices@gmail.com
                 </a>{" "}
               </address>
             </li>

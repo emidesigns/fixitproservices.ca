@@ -29,6 +29,7 @@ function Contact() {
         console.error("reCAPTCHA token is missing");
         return;
       }
+
       // Call Email.js service to send email
       await emailjs.send(
         "service_mhh61vv",
@@ -68,110 +69,12 @@ function Contact() {
           <p className="mx-auto max-w-xl py-4 text-white text-lg">
             Connect with us for consultations, questions, or to brainstorm
             ideas. Whether you have a specific project in mind or are simply
-            exploring possibilities, we’re here to assist.
-          </p>
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="pt-4 mx-auto max-w-xl"
-          >
-            <div className="mb-4">
-              <label htmlFor="user_name" className="block text-lg text-white">
-                Name (Required)
-              </label>
-              <input
-                id="user_name"
-                className="w-full p-2"
-                type="text"
-                {...register("user_name", {
-                  pattern: {
-                    value: /^[a-zA-Z ]*$/,
-                    message:
-                      "Please enter a valid personal name without numbers or special characters",
-                  },
-                  minLength: {
-                    value: 2,
-                    message: "Name must be at least 2 characters long",
-                  },
-                  required: "Name is a required field",
-                })}
-              />
-              {isSubmitted && !isValid && (
-                <div className="text-yellow pt-1">
-                  {errors.user_name?.message}
-                </div>
-              )}
-            </div>
-
-            <div className="mb-4">
-              <label htmlFor="contact" className="block text-lg text-white">
-                Phone or Email
-              </label>
-              <input
-                id="contact"
-                className="w-full p-2"
-                type="text"
-                {...register("contact", {
-                  pattern: {
-                    value:
-                      /^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3})|(\d{3}-\d{3}-\d{4})$/,
-                    message:
-                      "Invalid phone or email format. Phone number should follow: 000-000-0000",
-                  },
-                  required: "Contact information is a required field",
-                })}
-              />
-              {isSubmitted && !isValid && (
-                <div className="text-yellow pt-1">
-                  {errors.contact?.message}
-                </div>
-              )}
-            </div>
-
-            <div className="mb-4">
-              <label htmlFor="message" className="block text-lg text-white">
-                Message
-              </label>
-              <textarea
-                id="message"
-                className="w-full p-2"
-                rows={4}
-                {...register("message", {
-                  required:
-                    "A short message is required for us to learn about your project!",
-                })}
-              />
-              {errors.message && (
-                <div className="text-yellow">{errors.message.message}</div>
-              )}
-            </div>
-
-            <div className="mb-4">
-              <ReCAPTCHA
-                sitekey="6Lcs9zMpAAAAAAppcq1mJcDVYhbeWTyikW4Q0IyM"
-                onChange={(token) => setRecaptchaToken(token)}
-              />
-            </div>
-
-            <div>
-              <input
-                type="submit"
-                value="Submit"
-                className="w-full bg-yellow py-2 px-4"
-              />
-            </div>
-          </form>
-          {isEmailSent && (
-            <div className="bg-green-500 text-black my-2 py-2 px-4">
-              Email successfully sent! Thank you for contacting us.
-            </div>
-          )}
-          <p className="mx-auto max-w-xl py-4 text-white text-xl">
-            Or email us at:{" "}
+            exploring possibilities, we’re here to assist.{" "}
             <a
               className="underline underline-offset-4"
-              href="mailto:info@fixitproservices.ca"
+              href="mailto:info.fixitproservices@gmail.com"
             >
-              info@fixitproservices.ca
+              info.fixitproservices@gmail.com
             </a>
           </p>
         </div>
