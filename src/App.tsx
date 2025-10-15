@@ -33,7 +33,7 @@ const App = () => {
               throughout Etobicoke and the GTA.
             </p>
             <p className="pb-4">
-              We are committed to building that partnership by ensuring
+              We are committed to building lasting partnerships by ensuring
               impeccable quality and reliability on every project.
             </p>
             <p>
