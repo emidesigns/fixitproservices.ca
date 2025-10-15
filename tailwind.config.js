@@ -11,6 +11,13 @@ export default {
         "bg-light-blue": "rgb(0, 145, 255)",
         "yellow": "rgba(255, 255, 0, 1)"
       },
+      fontFamily: {
+        'material-symbols': ['"Material Symbols Outlined"', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
+        'climate-crisis': ['"Climate Crisis"', 'sans-serif'],
+        'alumni-sans': ['"Alumni Sans"', 'sans-serif'],
+        'hanken-grotesk': ['"Hanken Grotesk"', 'sans-serif'],
+      },
     },
   },
   plugins: [],

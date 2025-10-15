@@ -1,76 +1,55 @@
-import React from "react";
-import Nav from "./Nav";
-import ServiceTile from "./ServiceTile";
-import Contact from "./Contact";
-import services from "./data/servicesData";
-import backgroundImage from "./assets/images/fixitproservices-bg.jpg";
-import "./App.css";
-
-function App() {
-  React.useEffect(() => {
-    const img = new Image();
-    img.src = backgroundImage;
-  }, []);
-
+const App = () => {
   return (
-    <>
-        <Nav />
+    <div className="relative min-h-screen">
+      {/* Background image */}
       <div
-        className="max-w-full"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
+          backgroundImage:
+            "url('http://localhost:5173/src/assets/images/FPS-bg.avif')",
         }}
-      >
-        <section className="container mx-auto pt-20 px-20 main-bg">
-          <div className="grid justify-center text-center">
-            <h1 className="max-w-xl mx-auto text-5xl md:text-7xl text-white pb-10">
-              Fixit Pro Services
+      ></div>
+
+      {/* Overlay content */}
+      <div className="relative grid grid-cols-1 md:grid-cols-2 min-h-screen text-[#140F2D]">
+        {/* Left column (empty for spacing on desktop) */}
+        <div className="hidden md:block"></div>
+
+        {/* Right column (content) */}
+        <div className="flex flex-col justify-start md:justify-center items-center md:items-end md:pr-20 space-y-6 text-center mt-16 md:mt-0">
+          <section>
+            <h1 className="text-[#F49D37] text-[70px] md:text-[110px] tracking-[15px] md:tracking-[45px] font-climate-crisis">
+              FIXIT
             </h1>
-            <span className="material-symbols-outlined text-9xl text-yellow">
-              construction
-            </span>
-          </div>
-        </section>
-        <section>
-          <div className="grid text-center">
-            <h2 className="max-w-3xl mx-auto text-xl md:text-3xl px-10 pb-20 sm:pt-6 font-medium text-white">
-              Turn your house into a dream home with our handyman team. From
-              small repairs to home improvements, we’ve got you covered.{" "}
+            <h2 className="text-[#F49D37] text-[26px] md:text-[30px] tracking-[8px] md:tracking-[25px] font-hanken-grotesk">
+              PRO SERVICES
             </h2>
-          </div>
-        </section>
-      </div>
+          </section>
 
-      <section>
-        <div className="grid text-center">
-          <div className="max-w-full bg-white py-10">
-            <p className="max-w-3xl px-8 sm:px-0 mx-auto text-black text-lg">
-              In every interaction, we strive to make a lasting impact through
-              top-notch <strong>handyman</strong> and{" "}
-              <strong>repair services</strong> in <strong>Toronto</strong> and{" "}
-              <strong>Etobicoke</strong>. Our commitment goes beyond
-              transactions, fostering enduring customer relationships built on{" "}
-              <strong>trust</strong>, <strong>reliability</strong>, and{" "}
-              <strong>unparalleled service</strong>.
+          <section className="font-hanken-grotesk text-[#FFFFFF] md:text-left mx-10 md:mx-0">
+            <p className="pb-4">
+              <span className="font-semibold">FIXIT Pro Services</span> delivers
+              specialized expertise in handyman and general contracting
+              throughout Etobicoke and the GTA.
             </p>
-          </div>
+            <p className="pb-4">
+              We are committed to building that partnership by ensuring
+              impeccable quality and reliability on every project.
+            </p>
+            <p>
+              <a
+                href="mailto:info.fixitproservices@gmail.com"
+                className="text-[#F49D37]"
+              >
+                info.fixitproservices@gmail.com
+              </a>{" "}
+              <br /> <a href="tel:437-717-8294">437-717-8294</a>
+            </p>
+          </section>
         </div>
-      </section>
-
-      <section id="services-section" className="bg-gray-900 max-w-full pb-8">
-        <h3 className="text-center text-yellow py-12 px-8">Our services:</h3>
-
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl md:mx-auto mx-8 mb-8">
-          {services.map((service, index) => (
-            <ServiceTile key={index} {...service} />
-          ))}
-        </div>
-      </section>
-      <Contact />
-    </>
+      </div>
+    </div>
   );
-}
+};
 
 export default App;
