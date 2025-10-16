@@ -1,13 +1,12 @@
+import bgImage from "./assets/images/FPS-bg.avif";
+
 const App = () => {
   return (
     <div className="relative min-h-screen">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage:
-            "url('http://localhost:5173/src/assets/images/FPS-bg.avif')",
-        }}
+        style={{ backgroundImage: `url(${bgImage})` }}
       ></div>
 
       {/* Overlay content */}
