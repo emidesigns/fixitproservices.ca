@@ -42,7 +42,6 @@ const App = () => {
               >
                 info@fixitproservices.ca
               </a>{" "}
-              <br /> <a href="tel:437-717-8294">437-717-8294</a>
             </p>
           </section>
         </div>
