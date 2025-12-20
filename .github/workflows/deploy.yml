@@ -1,38 +1,30 @@
-name: Deploy to Hostinger FTP
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"] # Ensure this matches your default branch
+
+# Essential for GitHub Pages to work
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      # If you have a build step (npm run build, etc.), put it here
+      
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          node-version: 14
+          # This should be the folder containing your index.html
+          path: './docs' 
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./docs/
-          server-dir: /public_html/  # Use server-dir instead of remote-dir
-
-      - name: Check for Errors
-        run: |
-          if [ $? -ne 0 ]; then
-            echo "FTP deployment failed"
-            exit 1
-          fi
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
