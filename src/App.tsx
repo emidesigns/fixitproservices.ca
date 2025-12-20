@@ -37,10 +37,10 @@ const App = () => {
             </p>
             <p>
               <a
-                href="mailto:info@fixitproservices.ca"
+                href="mailto:info.fixitproservices@gmail.com"
                 className="text-[#F49D37]"
               >
-                info@fixitproservices.ca
+                info.fixitproservices@gmail.com
               </a>{" "}
             </p>
           </section>
